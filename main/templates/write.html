@@ -1,19 +1,49 @@
+{%load staticfiles%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>키오케어</title>
+    <style>
+        body{
+            text-align: center;
+            background-color: beige;
+            font-family:dotum;
+        }
+        h3{
+
+          font-size:50px;
+          padding:70px;
+        }
+        img{
+          padding : 20px;
+        }
+        label{
+          padding : 20px;
+        }
+
+    </style>
 </head>
 <body>
-    문진
-    <form method="POST" action="{%url 'write'%}">
+    <h3>문진</h3>
+    <form method="POST" action="{%url 'write'%}" >
         {%csrf_token%}
+  <br><br>
+        <img src="{% static 'img/외과.png' %}" alt="" width="100">
+        <img src="{% static 'img/내과.png' %}" alt="" width="100">
+        <br>
         <label><input type="radio" name="chk_info" value="1" required>외과</label>
         <label><input type="radio" name="chk_info" value="2">내과</label>
+        <br><br>
+        <img src="{% static 'img/정형외과.png' %}" alt="" width="100">
+        <img src="{% static 'img/성형외과.png' %}" alt="" width="100">
+        <br><br>
         <label><input type="radio" name="chk_info" value="3">정형외과</label>
         <label><input type="radio" name="chk_info" value="4">성형외과</label>
+        <br><br>
         <input type="submit" name="" value="제출">
     </form>
 </body>
