@@ -10,10 +10,10 @@
     문진
     <form method="POST" action="{%url 'write'%}">
         {%csrf_token%}
-        <input type="radio" name="chk_info" value="1">외과
-        <input type="radio" name="chk_info" value="2" checked="checked">내과
-        <input type="radio" name="chk_info" value="3">정형외과
-        <input type="radio" name="chk_info" value="4">성형외과
+        <label><input type="radio" name="chk_info" value="1" required>외과</label>
+        <label><input type="radio" name="chk_info" value="2">내과</label>
+        <label><input type="radio" name="chk_info" value="3">정형외과</label>
+        <label><input type="radio" name="chk_info" value="4">성형외과</label>
         <input type="submit" name="" value="제출">
     </form>
 </body>
