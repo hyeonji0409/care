@@ -12,6 +12,7 @@
             text-align: center;
             background-color: beige;
             font-family:dotum;
+            padding-top: 200px;
         }
         h3{
 
@@ -32,14 +33,14 @@
     <form method="POST" action="{%url 'write'%}" >
         {%csrf_token%}
   <br><br>
-        <img src="{% static 'img/외과.png' %}" alt="" width="100">
-        <img src="{% static 'img/내과.png' %}" alt="" width="100">
+        <img src="{% static 'img/외과.png' %}" alt="" width="150">
+        <img src="{% static 'img/내과.png' %}" alt="" width="150">
         <br>
         <label><input type="radio" name="chk_info" value="1" required>외과</label>
         <label><input type="radio" name="chk_info" value="2">내과</label>
         <br><br>
-        <img src="{% static 'img/정형외과.png' %}" alt="" width="100">
-        <img src="{% static 'img/성형외과.png' %}" alt="" width="100">
+        <img src="{% static 'img/정형외과.png' %}" alt="" width="150">
+        <img src="{% static 'img/성형외과.png' %}" alt="" width="150">
         <br><br>
         <label><input type="radio" name="chk_info" value="3">정형외과</label>
         <label><input type="radio" name="chk_info" value="4">성형외과</label>
