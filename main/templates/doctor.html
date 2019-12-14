@@ -9,15 +9,16 @@
         body{
             text-align: center;
             background-color: beige;
-            padding-top: 200px;
+            font-size: 60px;
+            margin:20px;
         }
     </style>
 </head>
 <body>
-    {%for a in doctor%}
-    {{a.Name}}<br>
-    {{a.Phone_Num}}<br>
-    {{a.Location}}<br>
+    {%for a in doctor%}<br>
+    {{a.Name}}<br><br>
+    {{a.Phone_Num}}<br><br>
+    {{a.Location}}<br><br>
     {%endfor%}
 </body>
 </html>
