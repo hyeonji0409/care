@@ -9,6 +9,8 @@
         body{
             text-align: center;
             background-color: beige;
+            padding:200px;
+            font-size:20px;
         }
         h3{
             font-size:50px;
@@ -19,15 +21,17 @@
         }
         label{
             padding : 20px;
-        }
+        }.inp input{ border-radius:10px; font-size:15px; margin:5px;}
+          .button{font-size:20px; background-color:#A1DFEA;width:120px;height:45px;cursor: pointer;border: none;border-radius:10px;margin:60px;}
     </style>
 </head>
 <body>
     <form method="POST">
         {%csrf_token%}
+        <div class="inp">
         이름 : <input type="text" name="name"><br>
-        주민번호 : <input type="text" name="personal_num1">-<input type="password" name="personal_num2"><br>
-        <input type="submit" value="제출하기">
+        주민번호 : <input type="text" name="personal_num1">-<input type="password" name="personal_num2"><br>    </div>
+        <input type="submit"  class="button" value="제출하기">
     </form>
 </body>
 </html>
